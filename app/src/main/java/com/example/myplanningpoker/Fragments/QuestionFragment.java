@@ -11,6 +11,7 @@ import android.widget.EditText;
 import com.example.myplanningpoker.R;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class QuestionFragment extends Fragment {
 
@@ -33,7 +34,11 @@ public class QuestionFragment extends Fragment {
         bt_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("kaka","kaka");
+
+                FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.container, new AnswerGroup());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

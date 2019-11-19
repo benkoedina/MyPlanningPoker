@@ -11,6 +11,13 @@ public class Question {
     private LocalDateTime question_time;
     private ArrayList<User> user;
 
+    public Question(int question_id, String question, boolean question_status, ArrayList<User> user) {
+        this.question_id = question_id;
+        this.question = question;
+        this.question_status = question_status;
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Question{" +

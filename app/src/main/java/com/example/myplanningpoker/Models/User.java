@@ -6,13 +6,19 @@ public class User {
     private int id;
     private String name;
     private int answer;
-    private ArrayList<Group> groups;
+    private ArrayList<Integer> groups;
 
-    public User(int id, String name, int answer, ArrayList<Group> groups) {
+    public User(int id, String name, int answer, ArrayList<Integer> groups) {
         this.id = id;
         this.name = name;
         this.answer = answer;
         this.groups = groups;
+    }
+
+    public User(int id, String name, int answer) {
+        this.id = id;
+        this.name = name;
+        this.answer = answer;
     }
 
     public int getId() {
@@ -49,11 +55,11 @@ public class User {
         this.answer = answer;
     }
 
-    public ArrayList<Group> getGroups() {
+    public ArrayList<Integer> getGroups() {
         return groups;
     }
 
-    public void setGroups(ArrayList<Group> groups) {
+    public void setGroups(ArrayList<Integer> groups) {
         this.groups = groups;
     }
 }
